@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <script type="text/javascript">
+            onload=function()
+            {
+                function removeActiveClass(node)
+                {
+                    node.className='';
+                }
+                document.querySelector('ul[id=text]').onclick=function(e)
+                {
+                    Array.prototype.forEach.call(document.querySelectorAll('ul[id=text]>li a'),removeActiveClass);
+                    var target = e.target;
+                    target.className="active";
+                }
+            }
+        </script>
+        <title>教学管理系统</title>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Welcome!</h1>
+        </div>
+        <div id="datetime">
+            <script>
+                setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();",0);
+            </script>
+        </div>
+        <div id="nav">
+            <ul id="text">
+              <li><a class="active" target="content" href="account.html" style="text-decoration:none">Account</a></li>
+              <li><a target="content" href="dashboard.html" style="text-decoration:none">Dashboard</a></li>
+              <li>
+                  <a target="content" href="course.html" style="text-decoration:none">Courses</a>
+                    <ul>
+                      <li><a target="content" href="course.html">Home</a></li>
+                      <li><a target="content" href="syllabus.html">Syllabus</a></li>
+                      <li><a target="content" href="modules.html">Modules</a></li>
+                      <li><a target="content" href="discussion.html">Discussion</a></li>
+                      <li><a target="content" href="zoom.html">Zoom</a></li>
+                      <li><a target="content" href="grades.html">Grades</a></li>
+                    </ul>
+              </li>
+              <li><a target="content" href="calendar.html" style="text-decoration:none">Calendar</a></li>
+              <li><a target="content" href="inbox.html" style="text-decoration:none">Inbox</a></li>
+              <li><a target="content" href="help.html" style="text-decoration:none">Help</a></li>
+              <li><a target="content" href="connect.html" style="text-decoration:none">Connect</a></li>
+            </ul>
+        </div>
+        <div id="section">
+            <iframe src="account.html" name="content" width=1000 height=500 frameborder="0" name="centerlist" scrolling="auto"></iframe>
+        </div>
+        <div id="footer">
+            Copyright ? Group3
+        </div>
+    </body>
+</html>
+
