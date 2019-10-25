@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>教学管理系统</title>
+    <style type="text/css">
+            .cardBox {
+                width: 200px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                text-align: center;
+                float: left;
+                margin-right: 10px;
+                padding: 5px;
+                padding-top: 15px;
+            }
+            .headerBox {
+                color: #fff;
+                padding: 10px;
+                font-size: 15px;
+                height: 60px;
+            }
+            .bodyBox {
+                padding: 10px;
+            }
+            .bodyBox p {
+                margin-left: 5px;
+            }
+    </style>
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- PNotify -->
+    <link href="../vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+    <link href="../vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+    <link href="../vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+  </head>
+<body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a class="site_title"><i class="fa fa-home"></i> <span>教学管理系统 </span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>欢迎</span>
+                  <a href="account.html"><h2>乌龙茶</h2></a>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+            <br />
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard </a></li>
+                  <li><a><i class="fa fa-desktop"></i> Course <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="home.html">Home</a></li>
+                      <li><a href="syllabus.html">Syllabus</a></li>
+                      <li><a href="modules.html">Modules</a></li>
+                      <li><a href="discussion.html">discussion</a></li>
+                      <li><a href="grades.html">Grades</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="calendar.html"><i class="fa fa-calendar"></i> Calendar </a></li>
+                  <li><a href="inbox.html"><i class="fa fa-inbox"></i> Inbox </a></li>
+                  <li><a href="help.html"><i class="fa fa-question-circle"></i> Help </a></li>
+                  <li><a href="connect.html"><i class="fa fa-bug"></i> Connect </a></li>
+                </ul>
+                </div>
+            </div>
+            <!-- /sidebar menu -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">乌龙茶
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="account.html">账户</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i>登出</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">1</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>主页</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                    <div id="datetime">
+                        <script>
+                            setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();",0);
+                        </script>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="">
+
+            <div class="col-md-9 col-sm-9 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>课程<small>已选择</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+
+                  <div class="cardBox">
+                    <div class="headerBox" style="background-color: #4caf50;">
+                        <p>
+                            <a title="查看详情" style="text-decoration:none; cursor:pointer; color:white" href="course1.html" target="content" >软件工程</a>
+                        </p>
+                    </div>
+                    <div class="bodyBox">
+                        <p>授课老师：孙老师</p>
+                        <p>上课时间：10:00-11:40</p>
+                        <p>上课地点：逸夫教学楼三阶</p>
+                    </div>
+                </div>
+                <div class="cardBox">
+                <div class="headerBox" style="background-color: #5BC0DE;">
+                    <p>
+                    <a title="查看详情" style="text-decoration:none; cursor:pointer; color:white" href="course2.html" target="content" >计算机英语三</a>
+                    </p>
+                </div>
+                <div class="bodyBox">
+                    <p>授课老师：王老师</p>
+                    <p>上课时间：13:30-15:10</p>
+                    <p>上课地点：经信教学楼四阶</p>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="headerBox" style="background-color: #5BC0DE;">
+                    <p>
+                    <a title="查看详情" style="text-decoration:none; cursor:pointer; color:white" href="course3.html" target="content" >软件工程实践</a>
+                    </p>
+                </div>
+                <div class="bodyBox">
+                    <p>授课老师：张老师</p>
+                    <p>上课时间：13:30-15:10</p>
+                    <p>上课地点：计算机楼B109</p>
+                </div>
+            </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>消息栏</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content bs-example-popovers">
+
+                  <div class="alert alert-success alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    <strong>未读消息</strong> 成绩发布
+                  </div>
+                  <div class="alert alert-info alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    <strong>未读消息</strong> 课件下载
+                  </div>
+                  <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    <strong>未读消息</strong> 邮箱邮件
+                  </div>
+                  <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    <strong>未读消息</strong> 紧急通知
+                  </div>
+                  
+
+                </div>
+              </div>
+            </div>
+            </div>
+         </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+           Copyright - Group3
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+      </div>
+    
+
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+      <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+      </ul>
+      <div class="clearfix"></div>
+      <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+  </body>
+</html>
